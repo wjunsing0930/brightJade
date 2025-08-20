@@ -8,7 +8,10 @@
 // mod gap_buffer;
 // mod grep_example;
 // mod interval_cmp;
-mod many_requests;
+// mod many_requests;
+// mod queue_exp;
+// mod ref_with_flag;
+mod spawn_blocking;
 
 fn main() {
     println!("Hello, world!");

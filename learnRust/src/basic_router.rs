@@ -71,5 +71,5 @@ fn test_router(){
     router.add_route("gcd", |req| get_gcd_response(req));
     assert_eq!(router.handle_request(&req("/piano")).code, 404);
     assert_eq!(router.handle_request(&req("/")).code, 200);
-    assert_eq!(router.handle_request(&req("/gcd")).code, 500);    
+    assert_eq!(router.handle_request(&req("/gcd")).code, 500);
 }

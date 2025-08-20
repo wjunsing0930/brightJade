@@ -4,7 +4,7 @@ use std::net::TcpStream;
 fn main() -> io::Result<()> {
     // 指定服务器地址和端口
     let server_addr = "127.0.0.1:17007";
-    
+
     // 连接到服务器
     let mut stream = TcpStream::connect(server_addr)?;
 

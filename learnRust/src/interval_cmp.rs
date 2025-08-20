@@ -24,5 +24,5 @@ fn test_partial_cmp(){
     let left  = Interval { lower: 10, upper: 30 };
     let right = Interval { lower: 20, upper: 40 };
     assert!(!(left < right));
-    assert!(!(left >= right));    
+    assert!(!(left >= right));
 }

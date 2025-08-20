@@ -52,7 +52,7 @@ mod first_cut{
                 im: self.im * rhs.re + self.re * rhs.im,
             }
         }
-    }  
+    }
 
     #[test]
     fn try_it_out() {
@@ -60,7 +60,7 @@ mod first_cut{
         let c = Complex { re: 3, im: 4 };
         z = z * z + c;
         let _ = std::mem::forget(z);//防止一个值在离开作用域时自动调用其析构函数
-    }  
+    }
     impl<T: PartialEq> PartialEq for Complex<T> {
         fn eq(&self, other: &Complex<T>) -> bool {
             self.re == other.re && self.im == other.im

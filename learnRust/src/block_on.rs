@@ -7,7 +7,7 @@ use std::task::{Context, Poll};
 //作用是 同步地等待一个异步 Future 完成
 //F: Future 是一个泛型约束，表示 block_on 可以接受任何实现了 Future trait 的类型
 pub fn block_on<F: Future>(future: F) -> F::Output {
-//Parker crossbeam::sync，是一个用于线程间同步的工具。用于阻塞当前线程直到异步任务的进度改变    
+//Parker crossbeam::sync，是一个用于线程间同步的工具。用于阻塞当前线程直到异步任务的进度改变
     let parker = Parker::new();
 //Unparker 是 Parker 的配对对象，用来从其他线程唤醒当前线程。通过 unparker.unpark()，可以通知 block_on 中的循环继续执
     let unparker = parker.unparker().clone();

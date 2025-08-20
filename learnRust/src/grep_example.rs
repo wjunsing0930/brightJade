@@ -65,7 +65,7 @@ fn grep_test(){
     // Now wrap the file path in a Vec<PathBuf>
     let target = "target";
     let file_path = vec![PathBuf::from(file_path)];  // Wrap in Vec<PathBuf>
-    
+
     // Call grep_main with the file as input
     let result = grep_main(target, file_path.clone());  // Pass a clone of file_path
 
@@ -73,5 +73,5 @@ fn grep_test(){
     assert!(result.is_ok(), "grep_main failed: {:?}", result.err());
 
     // Cleanup
-    std::fs::remove_file(&file_path[0]).expect("Failed to remove file"); 
+    std::fs::remove_file(&file_path[0]).expect("Failed to remove file");
 }
