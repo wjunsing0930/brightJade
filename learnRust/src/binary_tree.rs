@@ -73,7 +73,7 @@ fn test_walk(){
             left: BinaryTree::Empty,
             right: BinaryTree::Empty,
         })),
-    }));        
+    }));
     let result = tree.walk();
     println!("\ttest_walk: {:?}", result);  // 输出: [2, 1, 3]
 }

@@ -10,7 +10,7 @@ async fn cheapo_request(host:&str, port:u16, path:&str)
     socket.shutdown(net::Shutdown::Write)?;
     let mut response = String::new();
     socket.read_to_string(&mut response).await?;
-    
+
     Ok(response)
 }
 #[test]

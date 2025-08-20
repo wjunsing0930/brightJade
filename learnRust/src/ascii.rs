@@ -32,7 +32,7 @@ fn good_ascii() {
     use my_ascii::Ascii;
 
     let bytes: Vec<u8> = b"ASCII and ye shall receive".to_vec();
-    let ascii: Ascii = Ascii::from_bytes(bytes).unwrap(); 
+    let ascii: Ascii = Ascii::from_bytes(bytes).unwrap();
     let string = String::from(ascii);
     assert_eq!(string, "ASCII and ye shall receive");
 }
